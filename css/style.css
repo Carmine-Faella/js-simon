@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
-.d-none{
-    display: none;
+body{
+    text-align: center;
+}
+
+h1{
+    font-size: 3rem;
+    padding: 2rem 0;
+    color: red;
+}
+
+.numberDom{
+    font-size: 2rem;
+}
+
+.correctDom{
+    font-size: 2rem;
+    background-color: beige;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: auto;
+    width: 80%;
 }

@@ -2,9 +2,11 @@
 
 const numberDom = document.getElementById('number');
 
-const verifyDom = document.getElementById('verify');
+const correctDom = document.getElementById('correct');
 
 const randomList = numberRandomList();
+
+correctNumber = [];
 
 numberList = [];
 
@@ -14,11 +16,13 @@ console.log(randomList);
 
 console.log(numberList);
 
+console.log(correctNumber)
+
 //Predispongo il timing
 
-setTimeout(requestNumber, 40000);
+setTimeout(requestNumber, 4000);
 
-setInterval(timerOut, 30000);
+setInterval(timerOut, 3000);
 
 //Creo le funzioni utlili
  
@@ -28,11 +32,12 @@ function requestNumber(){
         numberList.push(parseInt(prompt('Inserisci qui i numeri che ti ricordi')));
 
         if(numberList[i] == randomList[i]){
-            alert('è giusto');
-        }else{
-            alert( 'non è giusto');
+            correctNumber.push(randomList[i]);
         }
     }  
+
+    correctDom.innerHTML += correctNumber;
+    correctDom.classList.add('correctDom');
     
 }
 
@@ -65,7 +70,13 @@ function randomNumber(){
 
 //Inserisco nel Dom i numeri random
 
-numberDom.innerHTML += randomList
+numberDom.innerHTML += randomList;
+
+numberDom.classList.add('numberDom');
+
+
+
+
 
 
 
