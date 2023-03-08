@@ -20,9 +20,9 @@ console.log(correctNumber)
 
 //Predispongo il timing
 
-setTimeout(requestNumber, 4000);
+setTimeout(requestNumber, 31000);
 
-setInterval(timerOut, 3000);
+setInterval(timerOut, 30000);
 
 //Creo le funzioni utlili
  
